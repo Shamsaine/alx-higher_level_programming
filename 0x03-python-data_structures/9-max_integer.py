@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-def add_tuple(tuple_a=(), tuple_b=()):
-    if len(tuple_a) < 2:
-        if len(tuple_a) == 0:
-            tuple_a = 0, 0
-        else:
-            tuple_a = tuple_a[0], 0
-    if len(tuple_b) < 2:
-        if len(tuple_b) == 0:
-            tuple_b = 0, 0
-        else:
-            tuple_b = tuple_b[0], 0
+def max_integer(my_list=[]):
+    if len(my_list) == 0:
+        return (None)
 
-    return (tuple_a[0] + tuple_b[0], tuple_a[1] + tuple_b[1])
+    x = my_list[0]
+    for i in range(len(my_list)):
+        if my_list[i] > x:
+            x = my_list[i]
+
+    return (x)
