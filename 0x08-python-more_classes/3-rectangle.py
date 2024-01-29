@@ -86,4 +86,3 @@ class Rectangle:
         for i in range(self.height):
             rect += '#'*self.width + '\n'
         return rect[:-1]
-
