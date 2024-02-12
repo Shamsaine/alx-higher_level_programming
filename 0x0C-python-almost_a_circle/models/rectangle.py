@@ -2,11 +2,12 @@
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
-        super()__init__(self, id=None):
-            self.__width = width
-            self.__height = height
-            self.__x = x
-            self.__y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+        super().__init__(id)
+
     def __str__(self):
         return 
 
@@ -16,7 +17,11 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        if:
+        if type(value) != int:
+            raise TypeError("Width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be greater than 0")
+        else:
             self.__width = value
 
     @property
@@ -25,7 +30,12 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.__height = value
+        if type(value) != int:
+            raise TypeError("Height must be an integer")
+        if value <= 0:
+            raise ValueError("Height must be greater than 0")
+        else:
+            self.__height = value
 
     @property
     def x(self):
@@ -33,7 +43,12 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.__x = value
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be greater than or equal to 0")
+        else:
+            self.__x = value
 
     @property
     def y(self):
@@ -41,10 +56,15 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.__y = y
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be greater than or equal to 0")
+        else:
+            self.__y = value
 
     def area(self):
-        pass
+        return self.width * self.height
 
     def display(self):
         pass
