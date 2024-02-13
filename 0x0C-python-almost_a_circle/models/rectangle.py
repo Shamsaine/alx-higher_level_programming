@@ -27,11 +27,9 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    def __str__(self):
-        return
-
     @property
     def width(self):
+         """Set/get the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -45,6 +43,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Set/get the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -58,6 +57,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Set/get the x coordinate of the Rectangle."""
         return self.__x
 
     @x.setter
@@ -71,6 +71,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Set/get the y coordinate of the Rectangle."""
         return self.__y
 
     @y.setter
@@ -83,9 +84,11 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
+         """Return the area of the Rectangle."""
         return self.width * self.height
 
     def display(self):
+        """Print the Rectangle using the `#` character."""
         if self.width == 0 or self.height == 0:
             print("")
             return
