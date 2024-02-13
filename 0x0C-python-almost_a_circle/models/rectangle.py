@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
 """Defines a rectangle class."""
 from models.base import Base
+
 
 class Rectangle(Base):
     """Represent a rectangle."""
@@ -28,7 +28,7 @@ class Rectangle(Base):
         super().__init__(id)
 
     def __str__(self):
-        return 
+        return
 
     @property
     def width(self):
@@ -95,6 +95,7 @@ class Rectangle(Base):
             [print(" ", end="") for x in range(self.x)]
             [print("#", end="") for w in range(self.width)]
             print("")
+
     def update(self, *args, **kwargs):
         """Update the Rectangle.
 
@@ -140,7 +141,8 @@ class Rectangle(Base):
                     self.x = v
                 elif k == "y":
                     self.y = v
-     def to_dictionary(self):
+
+    def to_dictionary(self):
         """Return the dictionary representation of a Rectangle."""
         return {
             "id": self.id,

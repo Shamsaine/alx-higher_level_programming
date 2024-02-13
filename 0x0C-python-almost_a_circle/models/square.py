@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 """Defines a square class."""
-
 from models.rectangle import Rectangle
+
 
 class Square(Rectangle):
     """Represent a square."""
