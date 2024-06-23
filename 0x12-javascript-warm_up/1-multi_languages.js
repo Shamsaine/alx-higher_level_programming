@@ -1,3 +1,7 @@
 #!/usr/bin/node
-const langs = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-langs.forEach(function (item, index, array) { console.log(item); });
+const a = 'C is fun';
+const b = 'Python is cool';
+const c = 'JavaScript is amazing';
+console.log(a);
+console.log(b);
+console.log(c);
